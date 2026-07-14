@@ -1,3 +1,4 @@
+import ChatWithSocket from "@/components/ChatWithSocket/ChatWithSocket";
 import Banner from "@/components/home/Banner/Banner";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       </header>
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 ">
 
-      <p>HEllo</p>
+      <ChatWithSocket/>
       
     
       
