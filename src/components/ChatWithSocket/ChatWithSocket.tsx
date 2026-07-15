@@ -9,15 +9,15 @@ const ChatWithSocket = () => {
   ]);
 
   // মেসেজ সাবমিট করার ফাংশন
-  const handleSendMessage = (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // পেজ রিফ্রেশ হওয়া বন্ধ করবে
+  const handleSendMessage = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); 
     if (message.trim() === '') return; // ফাঁকা মেসেজ পাঠানো যাবে না
 
     // নতুন মেসেজ অবজেক্ট
     const newMessage = {
       id: Date.now(),
       text: message,
-      sender: "Rakesh" // যেহেতু আপনি Rakesh হিসেবে সাইন ইন আছেন
+      sender: "Rakesh" 
     };
 
     // আগের মেসেজগুলোর সাথে নতুন মেসেজ যোগ করা
@@ -37,7 +37,7 @@ const ChatWithSocket = () => {
             <div className="w-10 h-10 rounded-full bg-emerald-800 flex items-center justify-center text-white font-semibold">
               R
             </div>
-            {/* Title & Typing Status */}
+        
             <div>
               <h2 className="text-sm font-semibold text-gray-800">Realtime group chat</h2>
               <p className="text-xs text-gray-400 italic">Someone is typing...</p>

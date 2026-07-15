@@ -30,27 +30,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent background scrolling on mobile drawer open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full h-[72px] transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white/90 backdrop-blur-md border-b border-gray-100/80 shadow-[0_4px_30px_rgba(0,0,0,0.03)]" 
-          : "bg-white border-b border-gray-100/50"
-      }`}
+      className={`sticky top-0 z-50 w-full h-[72px] transition-all duration-300 bg-white border-b border-gray-100/70 shadow-[0_4px_30px_rgba(0,0,0,0.03),0_1px_3px_rgba(0,0,0,0.02)]  `}
+     
     >
-    {/* ordiso space */}
+    {/* ordisso space */}
       <div className="mx-auto max-w-[1280px] h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
         {/* Left Section: Logo */}
@@ -115,7 +101,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden items-center">
+        <div className="flex md:hidden items-center bg-white">
           <button
             type="button"
             onClick={() => setIsOpen(true)}
